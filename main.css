@@ -1,0 +1,260 @@
+/* Ensure body doesn't lose its default spacing */
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    height: 100px; 
+    margin-top: 20px;
+    
+}
+
+/* Make text in specific columns black */
+.black-col{
+    color: #000 !important;
+}
+.blue-col{
+    color: blue;
+}
+
+/* WhatsApp link styling for header */
+.whatsapp-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #25D366; /* WhatsApp green */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Prevent images from causing horizontal scroll */
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.logo-img{
+    width: 30px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.icon-img{
+    width: 30px;
+    height: auto;
+}
+
+/* If you still see horizontal scroll on small screens you can enable:
+   body { overflow-x: hidden; }  -- use only if necessary */
+
+.welcome-section{
+     Use min-height to avoid collapse from child content and ensure at least 400px tall */
+    min-height: 200px;
+    height: 200px; /* explicit if you need exact height */
+    margin-top: 20px;
+    background-color: lightgrey;
+    display: flex; /* make centering reliable */
+    align-items: center;
+    justify-content: center;
+}
+
+.service1{
+    min-height: 50px;
+    height: 50px; /* explicit if you need exact height */
+    margin-top: 10px;
+    background-color: lightgrey;
+    display: flex; /* make centering reliable */
+    align-items: center;
+    justify-content: center;
+}
+
+.service2{
+    min-height: 400px;
+    height: 300px; /* explicit if you need exact height */
+    margin-top: 10px;
+    background-color: lightgrey;
+    display: flex; /* make centering reliable */
+    align-items: center;
+    justify-content: center;
+}
+
+.service3{
+    min-height: 300px;
+    height: 300px; /* explicit if you need exact height */
+    margin-top: 10px;
+    background-color: lightgrey;
+    display: flex; /* make centering reliable */
+    align-items: center;
+    justify-content: center;
+}
+
+.footer{
+    height: 100px; 
+    margin-top: 20px;
+    color: black;
+}
+
+/* Dashboard text section */
+
+.dashboard-text{
+    min-height: 150px;
+    height: 200px; /* explicit if you need exact height */
+    margin-top: 10px;
+    background-color: lightgrey;
+    display: flex; /* make centering reliable */
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard1{
+    margin-top: 5px;
+    display: flex; /* make centering reliable */
+    align-items: center;
+    justify-content: center;
+    color: red;
+}
+.dashboard2{
+    margin-top: 5px;
+    display: flex; /* make centering reliable */
+    align-items: center;
+    justify-content: center;
+}
+.dashboard-buttons{
+    margin-top: 5px;
+}
+
+/* Login Section */
+    .login-container {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      margin: 40px auto;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+    }
+
+    .login-container label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    /* .login-container button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: cornflowerblue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .login-container button:hover {
+      background-color: #3a6fcf;
+    } */
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+      text-align: center;
+      display: none;
+    }
+
+    .submit_button{
+
+        margin-top: 10px;
+    }
+
+    .signup-container {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+      margin: 60px auto;
+    }
+
+    .signup-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+      display: none;
+    }
+
+    .message {
+      margin-top: 20px;
+      text-align: center;
+      color: green;
+      display: none;
+    }
+
+    .a {
+      color: inherit;
+      decoration: none;
+    }
+    
+    .a:hover {
+      text-decoration: none;
+    }
+    .contact-info {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+    
+    h5 {
+      text-align: center;
+      color: #2c3e50;
+      margin-top: 15px;
+   }
+
+    
