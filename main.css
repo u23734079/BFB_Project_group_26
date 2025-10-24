@@ -256,5 +256,63 @@ img{
       color: #2c3e50;
       margin-top: 15px;
    }
+   .thanku-page{
+    min-height: 400px;
+    height: 400px; /* explicit if you need exact height */
+    margin-top: 20px;
+    background-color:white;
+    display: flex; /* make centering reliable */
+    align-items: center;
+    justify-content: center;
+
+   }
+   .status-select.status-washing {
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    color: #0c5460;
+  }
+
+  .status-select.status-onway {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+  }
+
+  .status-select.status-completed {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+  }
+
+  .status-select.status-none {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+  }
+  <!-- Static CSS for Status Colors -->
+
+  .status-select.status-washing {
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    color: #0c5460;
+  }
+
+  .status-select.status-onway {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+  }
+
+  .status-select.status-completed {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+  }
+
+  .status-select.status-none {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+  }
 
     
