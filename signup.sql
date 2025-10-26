@@ -4,11 +4,21 @@ CREATE TABLE IF NOT EXISTS signup (
     email TEXT NOT NULL UNIQUE,
     cell_number TEXT NOT NULL UNIQUE,
     residential_address TEXT NOT NULL,
-    password TEXT NOT NULL
+    password TEXT NOT NULL UNIQUE
 );
 
 --INSERT into signup (full_name, email, cell_number, residential_address, password) 
---VALUES ('Kithi','banzavilla@gmail.com','0694024979','Pretoria','kithi1234');
+--VALUES ('Tshepo Choene','Tshepochoene14@gmail.com','0694034979','Pretoria','tshepo1224'),
+       --('Thabang Matlou','Thabangmatlou32@gmail.com','0694044979','Cape Town','thabang114'),
+       --('Musa Mthombeni','Musamthombeni41@gmail.com','0694054979','Pretoria','musa145'),
+       --('Tshepang Masingiti','Tshepangmasingiti12@gmail.com','0694064979','Joburg','tshepang1234'),
+       --('Lebogang Leisa','Lebogangleisa24@gmail.com','0694074979','Joburg','lebogang1445'),
+       --('Lesego Matome','Lesegomatome11@gmail.com','0694084979','Pretoria','lesego1344'),
+       --('Lerato Moloi','Leratomoloi32@gmail.com','0624094979','Cape Town','lerato1234!'),
+       --('Tshego Shona','Tshegoshona47@gmail.com','0623014979','Pretoria','tshego41!'),
+       --('Monique Du plessis','Moniquedp12@gmail.com','0623024979','Joburg','monique44!'),
+       --('Lucas Vasquez','Lucasvasquez23@gmail.com','0624044979','Cape Town','lucasvasq10!')
+       --;
 --SELECT * FROM signup;
 --DELETE FROM signup WHERE Customer_id=1;
 
@@ -25,9 +35,12 @@ CREATE TABLE IF NOT EXISTS queries (
 );
 
 --INSERT into queries (Customer_id, full_name, email, cell_number, problem_description, details) 
---VALUES (1, 'Kithi', 'banzavilla@gamil.com', '0694024979', 'Login Issue', 'Unable to login with correct credentials');
+--VALUES (3, 'Musa Mthombeni', 'Musamthombeni41@gmail.com', '0694054979', 'Login Issue', 'Unable to login with correct credentials'),
+       --(1, 'Tshepo Choene', 'Tshepochoene14@gmail.com', '0694064979', 'Booking Issue', 'Unable to book a slot'),
+       --(3, 'Musa Mthombeni', 'Musamthombeni41@gmail.com', '0694054979', 'Booking Issue', 'Unable to book a slot')
+--;
 --SELECT * FROM queries;
---DELETE FROM queries WHERE query_id=1;
+--DELETE FROM queries;
 
 CREATE TABLE IF NOT EXISTS timeseek (
     time Text PRIMARY KEY NOT NULL
@@ -58,8 +71,21 @@ CREATE TABLE IF NOT EXISTS slot (
     FOREIGN KEY (time) REFERENCES timeseek(time)
 );
 
+PRAGMA foreign_keys = OFF;
+--INSERT into slot (Customer_id, day, time) 
+--VALUES (2, 5, '10:00'),
+       --(4, 12, '14:00'),
+       --(5, 20, '08:00');
+--SELECT * FROM slot;
+--DELETE FROM slot;
+
+PRAGMA foreign_keys = ON;
 CREATE TABLE IF NOT EXISTS tracklaundry (
     laundry_id INTEGER PRIMARY KEY AUTOINCREMENT,
     Customer_id INTEGER NOT NULL,
     FOREIGN KEY (Customer_id) REFERENCES signup(Customer_id)
 );
+
+--INSERT into tracklaundry (Customer_id) 
+--VALUES (2), (4), (5);
+--SELECT * FROM tracklaundry;
