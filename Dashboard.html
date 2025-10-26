@@ -3,66 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Dashboard - Smart Wash</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-    <div class="container">
-
-        <div class="row header border bg-light align-items-center justify-content-center">
-
-            <div class="col-md-1">
+    <div class="container-fluid px-0">
+        <!-- Header -->
+        <header class="header">
+            <div class="d-flex align-items-center">
                 <img src="img/washing-machine.png" alt="Logo" class="logo-img">
+                <h5 class="black-col mb-0 ms-2">Smart Wash</h5>
             </div>
-            <div class="col-md-3 black-col"><h5>Smart Wash</h5> </div>
+            <a href="home1.html">Home</a>
+            <a href="contact us1.html">Contact us</a>
+            <a href="Dashboard.html" class="blue-col"><strong>My Dashboard</strong></a>
+            <a href="home.html" class="btn btn-danger">Log out</a>
+        </header>
 
-            <div class="col-md-2  "><a href="home1.html">Home</a></div>
-            <div class="col-md-2"><a href="contact us1.html">Contact us </a></div>
-            <div class="col-md-2 blue-col" ><a href="Dashboard.html">My Dashboard</a></div>
-            <div class="col-md-2 " ><a href="home.html" class="btn btn-danger">Log out</a></div>
-
-
-        </div>
-
-        <div class="row dashboard-text border bg-light">
-            <div class="col-md-12 text-center"> <h1>Dashboard</h1> </div>
-        </div>
-
-        <div style="display: flex; justify-content: center;">
-            <h3 style="margin: 0;">Available Slot: <span>360</span></h3>
-        </div>
-
-
-        
-        <div class="col-md-12 text-center dashboard1"> Note : You cannot request if zero slot are available .</div>
-        
-
-        <div class=" dashboard-buttons d-grid gap-2">
-            <a href="product.html" class="btn btn-outline-primary"><h3>View My Laundry</h3> </a>
-        </div>
-
-        <div class="dashboard-buttons d-grid gap-2">
-            <a href="pickup.html" class="btn btn-outline-primary"><h3>Request For a Slot</h3> </a>
-        </div>
-
-        <div class="row footer border bg-light align-items-center justify-content-center">
-           
-            <div class="col-md-2 ">Smart Wash Coppright 2025</div>
-            <div class="col-md-2 ">Privacy Policy</div>
-
-            <div class="col-md-2 d-flex align-items-center">
-                <a class="whatsapp-link" href="https://wa.me/27788797062" target="_blank" rel="noopener noreferrer">
-                    <img src="img/whatsapp.png" alt="whatsapp" class="icon-img">
-                </a>
+        <!-- Main Content -->
+        <div class="container">
+            <!-- Dashboard Title -->
+            <div class="dashboard-text">
+                <h1>My Dashboard</h1>
             </div>
-            
-            <div class="col-md-2 "><img src="img/instagram.png"  class="icon-img"></div>
-            <div class="col-md-2 "><img src="img/facebook.png"   class="icon-img"></div>
-            <div class="col-md-2 "><img src="img/social-media.png"  class="icon-img"></div>
-        
+
+            <!-- Available Slots -->
+            <div class="text-center my-4">
+                <div class="card shadow-sm d-inline-block px-5 py-4">
+                    <h3 class="mb-0">Available Slots: <span class="text-primary">360</span></h3>
+                </div>
+            </div>
+
+            <!-- Note -->
+            <div class="dashboard1">
+                <strong> Note:</strong> You cannot request if zero slots are available.
+            </div>
+
+            <!-- Dashboard Buttons -->
+            <div class="row g-3 my-4">
+                <div class="col-12">
+                    <a href="product.html" class="btn btn-outline-primary btn-lg w-100 py-3">
+                        <h3 class="mb-0"> View My Laundry</h3>
+                    </a>
+                </div>
+
+                <div class="col-12">
+                    <a href="pickup.html" class="btn btn-outline-primary btn-lg w-100 py-3">
+                        <h3 class="mb-0"> Request For a Slot</h3>
+                    </a>
+                </div>
+            </div>
         </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div>Smart Wash © 2025</div>
+            <a href="#">Privacy Policy</a>
+            <a href="https://wa.me/27788797062" target="_blank" class="whatsapp-link">
+                <img src="img/whatsapp.png" alt="WhatsApp" class="icon-img"> WhatsApp
+            </a>
+            <a href="#" target="_blank">
+                <img src="img/instagram.png" alt="Instagram" class="icon-img"> Instagram
+            </a>
+            <a href="#" target="_blank">
+                <img src="img/facebook.png" alt="Facebook" class="icon-img"> Facebook
+            </a>
+            <a href="#" target="_blank">
+                <img src="img/social-media.png" alt="Social Media" class="icon-img"> TikTok
+            </a>
+        </footer>
     </div>
 </body>
 </html>

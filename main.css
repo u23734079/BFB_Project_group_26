@@ -1,318 +1,484 @@
-/* Ensure body doesn't lose its default spacing */
-.body {
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.header{
-    height: 100px; 
-    margin-top: 20px;
-    
-}
-
-/* Make text in specific columns black */
-.black-col{
-    color: #000 !important;
-}
-.blue-col{
-    color: blue;
-}
-
-/* WhatsApp link styling for header */
-.whatsapp-link{
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: #25D366; /* WhatsApp green */
-    text-decoration: none;
-    font-weight: 500;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
 }
 
 /* Prevent images from causing horizontal scroll */
-img{
+img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-.logo-img{
-    width: 30px;
-    height: auto;
-    margin-right: 8px;
-}
-
-.icon-img{
-    width: 30px;
-    height: auto;
-}
-
-/* If you still see horizontal scroll on small screens you can enable:
-   body { overflow-x: hidden; }  -- use only if necessary */
-
-.welcome-section{
-     Use min-height to avoid collapse from child content and ensure at least 400px tall */
-    min-height: 200px;
-    height: 200px; /* explicit if you need exact height */
-    margin-top: 20px;
-    background-color: lightgrey;
-    display: flex; /* make centering reliable */
+/* ===== HEADER ===== */
+.header {
+    background-color: #dfe6ed;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
+    padding: 20px 15px;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-top: 0 !important;
+    height: auto !important;
+    min-height: auto;
 }
 
-.service1{
-    min-height: 50px;
-    height: 50px; /* explicit if you need exact height */
-    margin-top: 10px;
-    background-color: lightgrey;
-    display: flex; /* make centering reliable */
-    align-items: center;
-    justify-content: center;
-}
-
-.service2{
-    min-height: 400px;
-    height: 300px; /* explicit if you need exact height */
-    margin-top: 10px;
-    background-color: lightgrey;
-    display: flex; /* make centering reliable */
-    align-items: center;
-    justify-content: center;
-}
-
-.service3{
-    min-height: 300px;
-    height: 300px; /* explicit if you need exact height */
-    margin-top: 10px;
-    background-color: lightgrey;
-    display: flex; /* make centering reliable */
-    align-items: center;
-    justify-content: center;
-}
-
-.footer{
-    height: 100px; 
-    margin-top: 20px;
+.header a {
     color: black;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: all 0.2s ease;
+    font-size: 16px;
 }
 
-/* Dashboard text section */
+.header a:hover {
+    transform: scale(1.05);
+    color: #007aff;
+}
 
-.dashboard-text{
+.logo-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+    object-fit: contain;
+}
+
+.black-col {
+    color: #000 !important;
+    font-weight: bold;
+}
+
+.blue-col a {
+    color: #007aff !important;
+    font-weight: 600;
+}
+
+/* ===== MAIN CONTENT SECTIONS ===== */
+.welcome-section {
+    min-height: 250px;
+    margin: 30px auto;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    color: white;
+}
+
+.welcome-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.service1 {
+    min-height: 80px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 20px;
+}
+
+.service1 h6 {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0;
+}
+
+.service2 {
+    min-height: 300px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 30px;
+}
+
+.service2 img {
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.service3 {
+    min-height: 300px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 40px;
+}
+
+.service3 h6 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.service3 ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.service3 li {
+    padding: 12px 0;
+    padding-left: 30px;
+    font-size: 1.1rem;
+    color: #555;
+    position: relative;
+}
+
+.service3 li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #007aff;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #dfe6ed;
+    color: black;
+    padding: 30px 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    margin-top: 50px;
+    height: auto !important;
+}
+
+.footer a {
+    color: black;
+    text-decoration: none;
+    margin: 5px 10px;
+    padding: 5px 10px;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer a:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.icon-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #25D366;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* ===== DASHBOARD SECTIONS ===== */
+.dashboard-text {
     min-height: 150px;
-    height: 200px; /* explicit if you need exact height */
-    margin-top: 10px;
-    background-color: lightgrey;
-    display: flex; /* make centering reliable */
+    margin: 30px auto;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    color: white;
+}
+
+.dashboard-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.dashboard1 {
+    margin: 20px 0;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #dc3545;
+    background-color: #fff3cd;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.dashboard2 {
+    margin: 15px 0;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.dashboard1{
+.dashboard-buttons {
+    margin: 15px 0;
+}
+
+.dashboard-buttons a {
+    margin: 10px 0;
+}
+
+/* ===== LOGIN & SIGNUP SECTIONS ===== */
+.login-container, .signup-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 60px auto;
+}
+
+.login-container h2, .signup-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 1.8rem;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px 15px;
     margin-top: 5px;
-    display: flex; /* make centering reliable */
-    align-items: center;
-    justify-content: center;
+    border: 2px solid #e8e8e8;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #007aff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+}
+
+.error {
     color: red;
-}
-.dashboard2{
-    margin-top: 5px;
-    display: flex; /* make centering reliable */
-    align-items: center;
-    justify-content: center;
-}
-.dashboard-buttons{
-    margin-top: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    display: none;
 }
 
-/* Login Section */
-    .login-container {
-      background-color: #ffffff;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      width: 100%;
-      max-width: 400px;
-      margin: 40px auto;
-    }
-
-    .login-container h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #2c3e50;
-    }
-
-    .login-container label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-
-    .login-container input {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-sizing: border-box;
-    }
-
-    /* .login-container button {
-      margin-top: 25px;
-      width: 100%;
-      padding: 12px;
-      background-color: cornflowerblue;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .login-container button:hover {
-      background-color: #3a6fcf;
-    } */
-
-    .error {
-      color: red;
-      font-size: 14px;
-      margin-top: 10px;
-      text-align: center;
-      display: none;
-    }
-
-    .submit_button{
-
-        margin-top: 10px;
-    }
-
-    .signup-container {
-      background-color: #ffffff;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      width: 100%;
-      max-width: 500px;
-      margin: 60px auto;
-    }
-
-    .signup-container h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #2c3e50;
-    }
-
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-sizing: border-box;
-    }
-
-    .error {
-      color: red;
-      font-size: 14px;
-      margin-top: 10px;
-      display: none;
-    }
-
-    .message {
-      margin-top: 20px;
-      text-align: center;
-      color: green;
-      display: none;
-    }
-
-    .a {
-      color: inherit;
-      decoration: none;
-    }
-    
-    .a:hover {
-      text-decoration: none;
-    }
-    .contact-info {
-      text-align: center;
-      font-family: Arial, sans-serif;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 8px;
-    }
-    
-    h5 {
-      text-align: center;
-      color: #2c3e50;
-      margin-top: 15px;
-   }
-   .thanku-page{
-    min-height: 400px;
-    height: 400px; /* explicit if you need exact height */
+.message {
     margin-top: 20px;
-    background-color:white;
-    display: flex; /* make centering reliable */
+    text-align: center;
+    color: green;
+    display: none;
+}
+
+.submit_button {
+    margin-top: 25px;
+}
+
+/* ===== CONTACT INFO ===== */
+.contact-info {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 40px auto;
+    padding: 30px;
+   
+    max-width: 600px;
+}
+
+.contact-info h5 {
+    color: #2c3e50;
+    margin: 20px 0;
+    font-size: 1.3rem;
+}
+
+.contact-item {
+    display: flex;
     align-items: center;
     justify-content: center;
+    margin: 20px 0;
+    gap: 10px;
+}
 
-   }
-   .status-select.status-washing {
+.contact-item a {
+    color: #007aff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* ===== THANK YOU PAGE ===== */
+.thanku-page {
+    min-height: 400px;
+    margin: 60px auto;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 40px;
+}
+
+.thanku-page h5 {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 15px 0;
+    line-height: 1.8;
+}
+
+.thanku-page a {
+    color: #007aff;
+    font-weight: 600;
+}
+
+/* ===== STATUS COLORS ===== */
+.status-select {
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.status-select.status-washing {
     background-color: #d1ecf1;
     border-color: #bee5eb;
     color: #0c5460;
-  }
+}
 
-  .status-select.status-onway {
+.status-select.status-onway {
     background-color: #fff3cd;
     border-color: #ffeeba;
     color: #856404;
-  }
+}
 
-  .status-select.status-completed {
+.status-select.status-completed {
     background-color: #d4edda;
     border-color: #c3e6cb;
     color: #155724;
-  }
+}
 
-  .status-select.status-none {
+.status-select.status-none {
     background-color: #f8d7da;
     border-color: #f5c6cb;
     color: #721c24;
-  }
-  <!-- Static CSS for Status Colors -->
+}
 
-  .status-select.status-washing {
-    background-color: #d1ecf1;
-    border-color: #bee5eb;
-    color: #0c5460;
-  }
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .header {
+        justify-content: center;
+        padding: 15px 10px;
+    }
 
-  .status-select.status-onway {
-    background-color: #fff3cd;
-    border-color: #ffeeba;
-    color: #856404;
-  }
+    .header a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
 
-  .status-select.status-completed {
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-    color: #155724;
-  }
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
 
-  .status-select.status-none {
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
-    color: #721c24;
-  }
+    .welcome-section h1 {
+        font-size: 2rem;
+    }
 
-    
+    .dashboard-text h1 {
+        font-size: 2rem;
+    }
+
+    .service1 h6 {
+        font-size: 1.1rem;
+    }
+
+    .service3 {
+        padding: 25px;
+    }
+
+    .service3 h6 {
+        font-size: 1.5rem;
+    }
+
+    .service3 li {
+        font-size: 1rem;
+    }
+
+    .login-container, .signup-container {
+        padding: 30px 20px;
+        margin: 30px 15px;
+    }
+
+    .footer {
+        justify-content: center;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .footer > div, .footer > a {
+        margin: 8px 5px;
+        font-size: 14px;
+    }
+
+    .icon-img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .service2 {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .service2 .col-md-6 {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+.contact-text{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+   
+}

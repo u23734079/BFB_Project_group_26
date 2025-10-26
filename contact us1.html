@@ -9,20 +9,22 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row header border bg-light align-items-center justify-content-center">
-
-            <div class="col-md-1">
+    <div class="container-fluid px-0">
+        <!-- Header -->
+        <header class="header">
+            <div class="d-flex align-items-center">
                 <img src="img/washing-machine.png" alt="Logo" class="logo-img">
+                <h5 class="black-col mb-0 ms-2">Smart Wash</h5>
             </div>
-            <div class="col-md-3 black-col"><h5>Smart Wash</h5> </div>
-            <div class="col-md-2  "><a href="home1.html">Home</a></div>
-            <div class="col-md-2"><a href="contact us1.html">Contact us </a></div>
-            <div class="col-md-2 blue-col" ><a href="Dashboard.html">My Dashboard</a></div>
-            <div class="col-md-2 " ><a href="home.html" class="btn btn-danger">Log out</a></div>
-        </div>
+            <a href="home1.html">Home</a>
+            <a href="contact us1.html"><strong>Contact us</strong></a>
+            <a href="Dashboard.html" class="blue-col">My Dashboard</a>
+            <a href="home1.html" class="btn btn-danger">Log out</a>
+        </header>
   <main>
-    <h5>For any queries or related concerns, feel free to contact us here.</h5>
+    <div class="contact-text">
+      <h5>For any queries or related concerns, feel free to contact us here.</h5>
+    </div>
     <div class="signup-container">
       <form id="signupForm">
         <label for="fullname">Full Name *</label>

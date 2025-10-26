@@ -9,22 +9,22 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row header border bg-light align-items-center justify-content-center">
-
-            <div class="col-md-1">
+    <div class="container-fluid px-0">
+        <!-- Header -->
+        <header class="header">
+            <div class="d-flex align-items-center">
                 <img src="img/washing-machine.png" alt="Logo" class="logo-img">
+                <h5 class="black-col mb-0 ms-2">Smart Wash</h5>
             </div>
-            <div class="col-md-4 black-col"><h5>Smart Wash</h5> </div>
-
-            <div class="col-md-1 blue-col"><a href="home.html">Home</a></div>
-            <div class="col-md-3"><a href="contact us.html">Contact Us</a></div>
-
-            <div class="col-md-1 " ><a href="login.html" class="btn btn-secondary">Login</a></div>
-            <div class="col-md-2 "><a href="signup.html" class="btn btn-primary">Sign Up</a></div>
-        </div>
+            <a href="home.html" class="blue-col">Home</a>
+            <a href="contact us.html"><strong>Contact Us</strong></a>
+            <a href="login.html" class="btn btn-outline-primary">Login</a>
+            <a href="signup.html" class="btn btn-primary">Sign Up</a>
+        </header>
   <main>
-    <h5>For any queries or related concerns, feel free to contact us here.</h5>
+    <div class="contact-text">
+      <h5>For any queries or related concerns, feel free to contact us here.</h5>
+    </div>
     <div class="signup-container">
       <form id="signupForm">
         <label for="fullname">Full Name *</label>
@@ -64,6 +64,7 @@
         <a href="tel:+27788797062">+27 78 879 7062</a>
        </div>
     </div>
+  </main>
 
 </body>
 </html>
