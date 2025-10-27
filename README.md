@@ -18,9 +18,12 @@ As a result, you cannot log in, but you can still access the dashboard page to g
 the dashboard is only accessible after signing up.
 
 The website is backed up by a database that contains ERD tables which store user information and details about the customer order.
+
 The signup table will be linked to the signup/ login page of the website and it will basically store customer details to the database. It will store customer details upon the specified attributes of the signup table, namely, customer_id, full name,email, cell number, reisdential address and password.
+
 The queriers table will be linked to the query page of the website and it will store details about customer queries so that it easier to help customers when they face challenges.
 It takes the customer_id attribute as a foreign key in order to link queries directly to specific customers.
+
 The slot table is another essential table for the website back-end. This table will link to the order placement/ slot selection page of the website, allowing customers to select slots for orders at specific times and days of the month.
 The slot table is linked to the timeseek and dayofmonth table to allow for order placement on specific times and days of the month. What links the slot table to the timeseek and dayofmonth table is the foreign keys associated with those tables, evident on the slot table. The individual foreign keys basically allow the selection of times of the day and days of the month for a customer order.
 
