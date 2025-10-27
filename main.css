@@ -96,6 +96,10 @@ img {
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     padding: 20px;
 }
+.service1-link {
+  text-decoration: none;
+  color: inherit; 
+}
 
 .service1 h6 {
     font-size: 1.3rem;
@@ -195,14 +199,7 @@ img {
     object-fit: contain;
 }
 
-.whatsapp-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: #25D366;
-    text-decoration: none;
-    font-weight: 500;
-}
+
 
 /* ===== DASHBOARD SECTIONS ===== */
 .dashboard-text {
