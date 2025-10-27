@@ -1,77 +1,95 @@
 <!DOCTYPE html>
-<div class="container">
-<div class="row g-4 align-items-center">
-<div class="col-md-6 text-center">
-<img
-src="img/machine-1.jpg"
-alt="High‑efficiency washing machine in operation"
-class="img-fluid rounded"
-loading="lazy"
-width="800" height="600"
-/>
-</div>
-<div class="col-md-6 text-center">
-<img
-src="img/machine-2.jpg"
-alt="Commercial laundry machine with eco mode"
-class="img-fluid rounded"
-loading="lazy"
-width="800" height="600"
-/>
-</div>
-</div>
-</div>
-</section>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Wash - Home</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="main.css" />
+</head>
 
+<body>
+  <div class="container-fluid px-0">
+    <!-- Header -->
+    <header class="header">
+      <div class="d-flex align-items-center">
+        <img src="img/washing-machine.png" alt="Logo" class="logo-img" />
+        <h5 class="black-col mb-0 ms-2">Smart Wash</h5>
+      </div>
+      <a href="home.html" class="blue-col"><strong>Home</strong></a>
+      <a href="contact us.html">Contact Us</a>
+      <a href="login.html" class="btn btn-outline-primary">Login</a>
+      <a href="signup.html" class="btn btn-primary">Sign Up</a>
+    </header>
 
-<!-- Why Us -->
-<section class="py-5 bg-light">
-<div class="container">
-<h2 class="h4 mb-4 text-center">Why Choose Us</h2>
-<div class="row justify-content-center">
-<div class="col-lg-8">
-<ul class="list-group list-group-flush list-group-numbered shadow-sm rounded overflow-hidden">
-<li class="list-group-item">Safe detergents that are gentle on fabrics</li>
-<li class="list-group-item">Color‑separated washes to protect sensitive garments</li>
-<li class="list-group-item">Eco‑friendly practices and efficient machines</li>
-<li class="list-group-item">Convenient, free pickup & delivery</li>
-<li class="list-group-item">Affordable, transparent pricing</li>
-<li class="list-group-item">No lost items (bye‑bye, missing socks!)</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-</main>
+    <!-- Main Content -->
+    <div class="container">
+      <!-- Welcome Section -->
+      <div class="welcome-section">
+        <h1>Welcome to Smart Wash</h1>
+      </div>
 
+      <!-- Service 1 -->
+      <div class="service1">
+        <h6>Get your laundry taken care of, instantly.</h6>
+      </div>
 
-<!-- Footer -->
-<footer class="py-4 border-top bg-light">
-<div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
-<div class="text-muted">Smart Wash © <span id="year">2025</span></div>
-<div class="d-flex align-items-center gap-3">
-<a class="link-secondary" href="#">Privacy Policy</a>
-<a class="d-inline-flex align-items-center gap-2 link-secondary" href="https://wa.me/27788797062" target="_blank" rel="noopener noreferrer">
-<img src="img/whatsapp.png" alt="WhatsApp" width="20" height="20" /> WhatsApp
-</a>
-<a class="d-inline-flex align-items-center gap-2 link-secondary" href="#" target="_blank" rel="noopener noreferrer">
-<img src="img/instagram.png" alt="Instagram" width="20" height="20" /> Instagram
-</a>
-<a class="d-inline-flex align-items-center gap-2 link-secondary" href="#" target="_blank" rel="noopener noreferrer">
-<img src="img/facebook.png" alt="Facebook" width="20" height="20" /> Facebook
-</a>
-<a class="d-inline-flex align-items-center gap-2 link-secondary" href="#" target="_blank" rel="noopener noreferrer">
-<img src="img/social-media.png" alt="TikTok" width="20" height="20" /> TikTok
-</a>
-</div>
-</div>
-</footer>
+      <!-- Service 2 - Images -->
+      <div class="service2">
+        <div class="row w-100">
+          <div class="col-md-6 text-center mb-3 mb-md-0">
+            <img
+              src="img/machine 1.jpg"
+              alt="Washing Machine 1"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-md-6 text-center">
+            <img
+              src="img/machine 2.jpg"
+              alt="Washing Machine 2"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
 
+      <!-- Service 3 - Why Us -->
+      <div class="service3">
+        <h6>Why Us?</h6>
+        <ul>
+          <li>Safe detergents (no cloth damage)</li>
+          <li>Separate sensitive colours</li>
+          <li>Eco-Friendly Practices</li>
+          <li>Convenient, free Pickup and Delivery</li>
+          <li>Affordable Pricing</li>
+          <li>No cloth loss (i.e. socks)</li>
+        </ul>
+      </div>
+    </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-jQwN0r9HqQb2llbRjvW0d93rTaSgc8PqUou3XJQO7Y2c3bJY7Zk2zH1G6xkEw8aV" crossorigin="anonymous"></script>
-<script>
-// Keep the copyright year current
-document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+    <!-- Footer -->
+    <footer class="footer">
+      <div>Smart Wash © 2025</div>
+      <a href="#">Privacy Policy</a>
+      <a href="https://wa.me/27788797062" target="_blank" class="whatsapp-link">
+        <img src="img/whatsapp.png" alt="WhatsApp" class="icon-img" /> WhatsApp
+      </a>
+      <a href="#" target="_blank">
+        <img src="img/instagram.png" alt="Instagram" class="icon-img" /> Instagram
+      </a>
+      <a href="#" target="_blank">
+        <img src="img/facebook.png" alt="Facebook" class="icon-img" /> Facebook
+      </a>
+      <a href="#" target="_blank">
+        <img src="img/social-media.png" alt="Social Media" class="icon-img" /> TikTok
+      </a>
+    </footer>
+  </div>
 </body>
 </html>
