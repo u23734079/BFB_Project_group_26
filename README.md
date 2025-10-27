@@ -1,4 +1,5 @@
 Smartwash 
+
 In this project, we aimed to improve the bottleneck in the university’s laundry system. As Industrial Engineering students,
 we applied Root Cause Analysis to identify the underlying problems.We developed a web-based platform that acts as a middleman,
 connecting students with laundry service providers. On this platform, available laundry slots are listed on the website, 
@@ -11,6 +12,7 @@ After the laundry is completed, the system updates the service page to show comp
 The laundry service provider then charges students residencer  based on the completed laundry per residence, using the data automatically provided by the system.
 
 Installation/setup instructions
+
 This system currently works through a website. The backend and frontend have been created but are not yet linked.
 As a result, you cannot log in, but you can still access the dashboard page to get a real feel of how the website operates — since normally,
 the dashboard is only accessible after signing up.
@@ -22,8 +24,11 @@ Click Home 1 to view the actual homepage. There is also an Admin Page that allow
 
 
 Group 26
+
 u23711044 KB Mhlanga
+
 u23755882 PV Mojela
+
 u23734079 D Langa
 
 
