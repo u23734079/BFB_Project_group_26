@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Smart Wash</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 </head>
 
 <body>
@@ -13,67 +13,107 @@
         <!-- Header -->
         <header class="header">
             <div class="d-flex align-items-center">
-                <img src="img/washing-machine.png" alt="Logo" class="logo-img">
+                <img src="{{ url_for('static', filename='img/washing-machine.png') }}" alt="Logo" class="logo-img">
                 <h5 class="black-col mb-0 ms-2">Smart Wash</h5>
             </div>
-            <a href="home1.html">Home</a>
-            <a href="contact us1.html">Contact us</a>
-            <a href="Dashboard.html" class="blue-col"><strong>My Dashboard</strong></a>
-            <a href="home.html" class="btn btn-danger">Log out</a>
+            <a href="{{ url_for('home') }}" class="blue-col">Home</a>
+            <a href="contact us.html">Contact Us</a>
+            <span class="text-white">Welcome, {{ user_name }}!</span>
+            <a href="{{ url_for('logout') }}" class="btn btn-outline-danger">Logout</a>
         </header>
+    </div>
 
-        <!-- Main Content -->
-        <div class="container">
-            <!-- Dashboard Title -->
-            <div class="dashboard-text">
-                <h1>My Dashboard</h1>
-            </div>
+    <div class="container mt-5">
+        <h1>Your Dashboard</h1>
+        
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ 'danger' if category == 'error' else 'success' }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
 
-            <!-- Available Slots -->
-            <div class="text-center my-4">
-                <div class="card shadow-sm d-inline-block px-5 py-4">
-                    <h3 class="mb-0">Available Slots: <span class="text-primary">360</span></h3>
+        <div class="row mt-4">
+            <!-- Booking Slots -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5>Your Booking Slots</h5>
+                    </div>
+                    <div class="card-body">
+                        {% if slots %}
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Slot ID</th>
+                                        <th>Day</th>
+                                        <th>Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for slot in slots %}
+                                    <tr>
+                                        <td>{{ slot['slot_id'] }}</td>
+                                        <td>Day {{ slot['day'] }}</td>
+                                        <td>{{ slot['time'] }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        {% else %}
+                            <p class="text-muted">No bookings yet. Book your first slot!</p>
+                            <a href="#" class="btn btn-primary">Book Now</a>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
 
-            <!-- Note -->
-            <div class="dashboard1">
-                <strong> Note:</strong> You cannot request if zero slots are available.
-            </div>
-
-            <!-- Dashboard Buttons -->
-            <div class="row g-3 my-4">
-                <div class="col-12">
-                    <a href="product.html" class="btn btn-outline-primary btn-lg w-100 py-3">
-                        <h3 class="mb-0"> View My Laundry</h3>
-                    </a>
-                </div>
-
-                <div class="col-12">
-                    <a href="pickup.html" class="btn btn-outline-primary btn-lg w-100 py-3">
-                        <h3 class="mb-0"> Request For a Slot</h3>
-                    </a>
+            <!-- Laundry Tracking -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        <h5>Laundry Tracking</h5>
+                    </div>
+                    <div class="card-body">
+                        {% if laundry %}
+                            <p>You have <strong>{{ laundry|length }}</strong> laundry item(s) being tracked.</p>
+                            <ul class="list-group">
+                                {% for item in laundry %}
+                                <li class="list-group-item">
+                                    Laundry ID: {{ item['laundry_id'] }}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        {% else %}
+                            <p class="text-muted">No laundry items being tracked.</p>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div>Smart Wash © 2025</div>
-            <a href="https://wa.me/27788797062">
-                <img src="img/whatsapp.png" alt="WhatsApp" class="icon-img"> WhatsApp
-            </a>
-            <a href="https://www.instagram.com/ozothile_ngakhokonke/">
-                <img src="img/instagram.png" alt="Instagram" class="icon-img"> Instagram
-            </a>
-            <a href="https://www.facebook.com/ozothile.ngakhokonke">
-                <img src="img/facebook.png" alt="Facebook" class="icon-img"> Facebook
-            </a>
-            <a href="https://www.tiktok.com/@heynate011?_t=ZS-90tYM9v875G&_r=1">
-                <img src="img/social-media.png" alt="Social Media" class="icon-img"> TikTok
-            </a>
-            <a href="privacy policy1.html">Privacy Policy</a>
-        </footer>
+        <!-- Quick Actions -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header bg-info text-white">
+                        <h5>Quick Actions</h5>
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="btn btn-primary me-2">Book a Slot</a>
+                        <a href="#" class="btn btn-success me-2">Track Laundry</a>
+                        <a href="contact us.html" class="btn btn-warning">Submit Query</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
