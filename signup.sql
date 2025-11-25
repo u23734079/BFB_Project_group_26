@@ -7,20 +7,21 @@ CREATE TABLE IF NOT EXISTS signup (
     password TEXT NOT NULL UNIQUE
 );
 
---INSERT into signup (full_name, email, cell_number, residential_address, password) 
---VALUES ('Tshepo Choene','Tshepochoene14@gmail.com','0694034979','Pretoria','tshepo1224'),
-       --('Thabang Matlou','Thabangmatlou32@gmail.com','0694044979','Cape Town','thabang114'),
-       --('Musa Mthombeni','Musamthombeni41@gmail.com','0694054979','Pretoria','musa145'),
-       --('Tshepang Masingiti','Tshepangmasingiti12@gmail.com','0694064979','Joburg','tshepang1234'),
-       --('Lebogang Leisa','Lebogangleisa24@gmail.com','0694074979','Joburg','lebogang1445'),
-       --('Lesego Matome','Lesegomatome11@gmail.com','0694084979','Pretoria','lesego1344'),
-       --('Lerato Moloi','Leratomoloi32@gmail.com','0624094979','Cape Town','lerato1234!'),
-       --('Tshego Shona','Tshegoshona47@gmail.com','0623014979','Pretoria','tshego41!'),
-       --('Monique Du plessis','Moniquedp12@gmail.com','0623024979','Joburg','monique44!'),
-       --('Lucas Vasquez','Lucasvasquez23@gmail.com','0624044979','Cape Town','lucasvasq10!')
-       --;
---SELECT * FROM signup;
---DELETE FROM signup WHERE Customer_id=1;
+INSERT into signup (full_name, email, cell_number, residential_address, password) 
+VALUES ('Tshepo Choene','Tshepochoene14@gmail.com','0694034979','Pretoria','tshepo1224'),
+       ('Thabang Matlou','Thabangmatlou32@gmail.com','0694044979','Cape Town','thabang114'),
+       ('Musa Mthombeni','Musamthombeni41@gmail.com','0694054979','Pretoria','musa145'),
+       ('Tshepang Masingiti','Tshepangmasingiti12@gmail.com','0694064979','Joburg','tshepang1234'),
+       ('Lebogang Leisa','Lebogangleisa24@gmail.com','0694074979','Joburg','lebogang1445'),
+       ('Lesego Matome','Lesegomatome11@gmail.com','0694084979','Pretoria','lesego1344'),
+       ('Lerato Moloi','Leratomoloi32@gmail.com','0624094979','Cape Town','lerato1234!'),
+       ('Tshego Shona','Tshegoshona47@gmail.com','0623014979','Pretoria','tshego41!'),
+       ('Monique Du plessis','Moniquedp12@gmail.com','0623024979','Joburg','monique44!'),
+       ('Lucas Vasquez','Lucasvasquez23@gmail.com','0624044979','Cape Town','lucasvasq10!')
+       ;
+SELECT * FROM signup;
+DELETE FROM signup;
+DELETE FROM signup WHERE Customer_id=1;
 
 PRAGMA foreign_keys = ON;
 CREATE TABLE IF NOT EXISTS queries (
